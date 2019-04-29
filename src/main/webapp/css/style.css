@@ -1,0 +1,31 @@
+@font-face {
+     font-family: bebas;
+     src: url('../font/BebasNeue-Regular.otf');
+}
+
+body{
+  font-family:bebas;
+  margin: 0 auto 0 auto;  
+  width:100%; 
+  text-align:center;
+  margin: 20px 0px 20px 0px;   
+}
+
+p{
+  font-family:bebas;
+  font-size:1.5em;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+h1{
+  font-family:bebas;
+  color:#525252;
+}
+
+h3{
+	font-family:bebas;
+	font-weight: 400;
+	margin: 10px 0;
+}
+

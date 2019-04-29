@@ -1,0 +1,77 @@
+.chefe{
+	padding: 300px;
+}
+
+.candidatos{
+	line-height: 5em;
+}
+
+.lbl{
+	font-family:bebas;
+	font-size:1.5em;
+}
+
+#btnVoltar{
+	color: #fff;
+	background-color: #3CB371;
+	font-family:bebas;
+	font-size:1.5em;
+}
+
+input {
+  border:1px solid #ccc;
+  font-family:bebas;
+  font-size:1.5em;
+  width:250px;
+  min-height:30px;
+  display:block;
+  margin-bottom:15px;
+  margin-top:5px;
+  outline: none;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+  border-radius:5px;
+  margin:auto;
+  color: #fff;
+}
+
+input[type=submit] {
+  background:none;
+  padding:10px;
+}
+
+input.btn{
+display:inline-block;
+padding:0.5em 0em;
+border:0.16em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+box-sizing: border-box;
+background-color: #4682B4;
+text-decoration:none;
+text-transform:uppercase;
+font-family:bebas;
+font-weight:400;
+font-size:1.5em;
+color:#FFFFFF;
+text-align:center;
+transition: all 0.15s;
+}
+
+input.btn:hover{
+ color:#DDDDDD;
+ border-color:#DDDDDD;
+}
+
+input.btn:active{
+ color:#BBBBBB;
+ border-color:#BBBBBB;
+}
+
+@media all and (max-width:30em){
+input.btn{
+  display:block;
+  margin:0.4em auto;
+ }
+}
