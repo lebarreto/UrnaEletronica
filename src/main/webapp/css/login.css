@@ -21,7 +21,7 @@
   margin-bottom: 6px;
 }
 
-.password{
+.senha{
   border-radius:4px;
   background:#ecf0f1;
   border: #ccc 1px solid;
@@ -30,7 +30,7 @@
   font-size:1em;
 }
 
-input.btnLogin{
+button.btnLogin{
 display:inline-block;
 padding:0.5em 2em;
 border:0.16em solid #FFFFFF;
@@ -47,12 +47,12 @@ text-align:center;
 transition: all 0.15s;
 }
 
-input.btnLogin:hover{
+button.btnLogin:hover{
  color:#DDDDDD;
  border-color:#DDDDDD;
 }
 
-input.btnLogin:active{
+button.btnLogin:active{
  color:#BBBBBB;
  border-color:#BBBBBB;
 }

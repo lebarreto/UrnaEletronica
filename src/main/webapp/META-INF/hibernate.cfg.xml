@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.username">
+      root
+    </property>
+    <property name="hibernate.connection.password">
+      Mysql2019
+    </property>
+    <property name="hibernate.connection.url">
+      jdbc:mysql://localhost:3306/projetoeleicao?useTimezone=true&amp;serverTimezone=UTC
+    </property>
+    <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+    </property>
+    <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQL5InnoDBDialect
+    </property>
+    
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    
+    <mapping class="eleicao.model.ModelUser" />
+    <mapping class="eleicao.model.ModelHabilitar" />
+    <mapping class="eleicao.model.ModelVotos" />
+    <mapping class="eleicao.model.ModelCandidatos" />
+  </session-factory>
+</hibernate-configuration>

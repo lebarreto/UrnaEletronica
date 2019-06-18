@@ -1,29 +1,30 @@
-
 plugins {
     id 'java'
     id 'war'
-    id 'org.gretty' version '2.2.0'
+    id 'org.gretty' version '2.3.1' 
 }
 
-repositories {
+repositories{
     jcenter()
 }
 
-dependencies {
-	providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+dependencies{
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
+    implementation 'org.hibernate:hibernate-search-orm:5.8.0.Final'
+    implementation 'mysql:mysql-connector-java:8.0.15'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '1.0'
+    compile 'org.glassfish:javax.json:1.0.2' 
+	compile 'com.google.code.gson:gson:2.8.5'
+	compile 'org.apache.tomcat:tomcat:9.0.17'
+	compile 'javax.servlet:jstl:1.2'
+	compile group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.2.3-1'
+	compile group: 'javax.activation', name: 'activation', version: '1.1.1'
+	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2'
+	compile group: 'com.googlecode.genericdao', name: 'dao-hibernate', version: '1.2.0'
 	
-	//Adicionar dependências
-  	compile("org.springframework:spring-context:4.0.1.RELEASE")
-	compile("org.springframework:spring-webmvc:4.1.6.RELEASE")
-	compile("org.aspectj:aspectjrt:1.7.4")
-	compile("javax.inject:javax.inject:1")
-    compile("javax.servlet:servlet-api:2.5")
-    compile("javax.servlet:jstl:1.2")
-    compile("javax.servlet.jsp:javax.servlet.jsp-api:2.2.1")	
-    compile("org.slf4j:slf4j-api:1.7.5")
-    compile("org.slf4j:jcl-over-slf4j:1.7.5")
-    compile("org.slf4j:slf4j-log4j12:1.7.5")
-    compile("log4j:log4j:1.2.15")
-    
-    //Adicionar dependências para rodar testes
+	
+}
+
+gretty {
+  servletContainer = 'tomcat9'
 }
