@@ -35,7 +35,7 @@
 			        <input type="hidden" id="nivel" name="nivel" value="${sessionScope.nivel}" readonly/>
 							
 					<button class="clear" onclick="validar()">Validar</button>
-			        <button class="confirm" onclick="habilitar()">Habilitar</button>        
+			        <button class="confirm" onclick="habilitar()">Habilitar</button>
 				</form>
 			  
 		  </div> 

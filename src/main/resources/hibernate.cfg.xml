@@ -27,7 +27,6 @@
     
     <mapping class="eleicao.model.ModelUser" />
     <mapping class="eleicao.model.ModelHabilitar" />
-    <mapping class="eleicao.model.ModelVotos" />
     <mapping class="eleicao.model.ModelCandidatos" />
   </session-factory>
 </hibernate-configuration>

@@ -45,7 +45,7 @@ DROP TABLE IF EXISTS `ModelCandidatos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `ModelCandidatos` (
-  `numero` int(11) NOT NULL,
+  `numero` varchar(100) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `voto` int(11) NOT NULL,
   PRIMARY KEY (`numero`)
@@ -58,7 +58,7 @@ CREATE TABLE `ModelCandidatos` (
 
 LOCK TABLES `ModelCandidatos` WRITE;
 /*!40000 ALTER TABLE `ModelCandidatos` DISABLE KEYS */;
-INSERT INTO `ModelCandidatos` VALUES (0,'BRANCO',0),(1,'NULO',0),(12,'Ciro Gomes',0),(13,'José Serra',0),(17,'Jair Bolsonaro',0),(19,'Cabo Daciolo',0);
+INSERT INTO `ModelCandidatos` VALUES ('0','BRANCO',0),('1','NULO',0),('12','Ciro Gomes',1),('13','José Serra',1),('17','Jair Bolsonaro',0),('19','Cabo Daciolo',0);
 /*!40000 ALTER TABLE `ModelCandidatos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,10 +181,9 @@ CREATE TABLE `ModelUser` (
 
 LOCK TABLES `ModelUser` WRITE;
 /*!40000 ALTER TABLE `ModelUser` DISABLE KEYS */;
-INSERT INTO `ModelUser` VALUES ('1111','2018-01-15','1','1','Nathan Maronez','2018-01-15',3,'1111',NULL,NULL,NULL,NULL,NULL,NULL,'N','N'),('1234','2018-01-15','1','1','Laura Maia','2018-01-15',1,'1234',NULL,NULL,NULL,NULL,NULL,NULL,'Y','N'),('5678','2018-01-15','1','1','Letícia Barreto','2018-01-15',2,'5678',NULL,NULL,NULL,NULL,NULL,NULL,'N','N');
+INSERT INTO `ModelUser` VALUES ('1111','2018-01-15','1','1','Nathan Maronez','2018-01-15',3,'1111',NULL,NULL,NULL,NULL,NULL,NULL,'N','Y'),('1234','2018-01-15','1','1','Laura Maia','2018-01-15',1,'1234',NULL,NULL,NULL,NULL,NULL,NULL,'N','Y'),('5678','2018-01-15','1','1','Letícia Barreto','2018-01-15',2,'5678',NULL,NULL,NULL,NULL,NULL,NULL,'N','N');
 /*!40000 ALTER TABLE `ModelUser` ENABLE KEYS */;
 UNLOCK TABLES;
-
 
 --
 -- Table structure for table `ModelZona`
@@ -245,5 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-18 15:22:43
-
+-- Dump completed on 2019-06-24 21:08:16

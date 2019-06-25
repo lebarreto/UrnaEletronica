@@ -4,7 +4,7 @@ function backPage(valueName){
     var url = "&";
     
 
-    document.forms[0].action = "/Eleicao/redirect?pagina=/zona.jsp" + url;
+    document.forms[0].action = "/Eleicao/redirect?pagina=/relatorio.jsp" + url;
     document.forms[0].method = "GET";
 
 }

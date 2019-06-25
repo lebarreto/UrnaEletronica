@@ -6,28 +6,23 @@
 
  <persistence-unit name="projetoeleicao">
 
-   <!-- provedor/implementacao do JPA -->
    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-   <!-- entidade mapeada -->
+   <!-- entidade -->
    <class>eleicao.model.ModelUser</class>
 	<class>eleicao.model.ModelCandidatos</class>
 	<class>eleicao.model.ModelHabilitar</class>
-	<class>eleicao.model.ModelVotos</class>
 
    <properties>
-    <!-- dados da conexao -->
     <property name="javax.persistence.jdbc.driver"  value="com.mysql.jdbc.Driver" />
     <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/projetoeleicao" />
     <property name="javax.persistence.jdbc.user" value="root" />
     <property name="javax.persistence.jdbc.password" value="Mysql2019" />
 
-     <!--  propriedades do hibernate -->
     <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
     <property name="hibernate.show_sql" value="true" />
     <property name="hibernate.format_sql" value="true" />
 
-    <!--  atualiza o banco, gera as tabelas se for preciso -->
     <property name="hibernate.hbm2ddl.auto" value="update" />
 
    </properties>

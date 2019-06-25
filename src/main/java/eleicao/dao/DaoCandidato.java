@@ -11,13 +11,14 @@ public class DaoCandidato extends GenericDao{
 	protected EntityManager entityManager;
 
 	public DaoCandidato() {
-		super();
+		init();
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T find(String id) {
-		return (T) session.find(ModelCandidatos.class, Integer.parseInt(id));
+		System.out.println("IDDDD" + id);
+		return (T) session.find(ModelCandidatos.class, id);
 	}
 
 	@SuppressWarnings("unchecked")

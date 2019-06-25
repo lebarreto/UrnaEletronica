@@ -8,35 +8,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css"/>
-<link rel="stylesheet" href="./css/bootstrap-responsive.min.css" type="text/css"/>
-<link rel="stylesheet" href="./css/styles.css" type="text/css"/>
-<script type="text/javascript" src="./js/script.js"></script>
-<title>Relatório</title>
+	<meta charset="UTF-8">
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="./css/home.css" rel="stylesheet" type="text/css">
+	<script src="./js/votacao.js"></script>
+	<script src="./js/script.js"></script>
+	<title>Relatório</title>
 </head>
 <body>
-<% List<ModelCandidatos> candidatos = new DaoCandidato().findAll(); %>
 	<div>
 		<div>
 		  <div>
 			  <h1>Relatório de Votação</h1>
-			  <% for(ModelCandidatos cand : candidatos) { %>
-			  <div class="candidatos">
-				 <label class="lbl">Candidato Ciro Gomes: <%=cand.getVoto()%> votos</label>	
-			  </div>				
-			  <div class="candidatos">
-				 <label class="lbl">Candidato José Serra: <%=cand.getVoto()%> votos </label>	
-			  </div>	
-			  <div class="candidatos">
-				 <label class="lbl">Candidato Jair Bolsonaro: <%=cand.getVoto()%> votos </label>	
-			  </div>
-			  <div class="candidatos">
-				 <label class="lbl">Candidato Cabo Daciolo: <%=cand.getVoto()%> votos </label>	
-			  </div>
-			  <%}%>
+			  <% List<ModelCandidatos> candidatos = new DaoCandidato().findAll(); %>
+				<% for(ModelCandidatos c : candidatos) { %>
+			 <div class="candidatos">
+			 	  <img id="img" src="./imagem/<%=c.getNumero()%>.jpg">
+	              <div class="lbl"> <b>Numero:</b><%=c.getNumero()%></div>
+	              <div class="lbl"> <b>Nome:</b><%=c.getNome()%></div>
+	              <div class="lbl"> <b>Votos:</b><%=c.getVoto()%></div>
+		     </div>
 			  
-			  <input type="submit" id="btnVoltar" onclick="goTo()" value="Voltar" /> 
+ 			<%}%>
+ 			<br>
+ 			<button class="otherBtn" onclick="window.history.back()">Voltar</button>
+ 			
+ 
 		  </div> 
 		</div>
 	</div>

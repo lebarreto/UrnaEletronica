@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import eleicao.dao.DaoCandidato;
 import eleicao.dao.DaoUser;
 import eleicao.model.ModelCandidatos;
 import eleicao.model.ModelUser;
@@ -30,11 +31,21 @@ public class Votar extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		HttpSession session = request.getSession();
+		
 		String titulo = (String) request.getParameter("user");
+		String candidato = request.getParameter("numero");
+		
+		System.out.println(candidato);
+		
 		if(titulo == null) titulo = (String) session.getAttribute("titulo");
 
 		ModelUser controle = new DaoUser().find(titulo);
+		DaoCandidato candidatoDao = new DaoCandidato();
+		ModelCandidatos candidatosm = (ModelCandidatos) candidatoDao.find(candidato);
+		System.out.println("CANDIDATOOOOO " + candidatosm.getNumero());
+		
 		if(controle != null){
 			
 			if(controle.getDisponivel() == 'Y' && controle.getIndisponivel() == 'N'){				
@@ -45,12 +56,11 @@ public class Votar extends HttpServlet{
 				muser.setDisponivel('N');
 				muser.setIndisponivel('Y');
 				userdao.save(muser);
-				ModelCandidatos voto = new ModelCandidatos();
-				
-				System.out.println("calcula" + voto);
 
-				int calcula = voto.getVoto() + 1;
-				voto.setVoto(calcula);
+				int calcula = candidatosm.getVoto() + 1;
+				candidatosm.setVoto(calcula);
+				
+				candidatoDao.save(candidatosm);
 				
 				
 				int tipo = (int) Integer.parseInt(String.valueOf(session.getAttribute("nivel")));

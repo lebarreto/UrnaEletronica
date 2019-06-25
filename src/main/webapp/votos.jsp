@@ -24,9 +24,7 @@
 
 				  <input type="hidden" id="numero" name="numero" readonly>					
 				 
-				  <button class="confirm" onclick="votar()">CONFIRMA</button>    
-    			  <button class="null" onclick="votar()">BRANCO</button>
-    			  <button class="other" onclick="goTo()">VOLTAR</button>
+				  <button class="confirm" onclick="votar()">Confirmar</button>    
 			</form>		  
 			 <img id="imgCandidato" src="./imagem/0.png" style="width:20%">
 		  </div> 

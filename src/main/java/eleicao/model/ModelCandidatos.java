@@ -9,7 +9,7 @@ public class ModelCandidatos {
 
 	@Id
 	@Column(name = "numero")
-	private int numero;
+	private String numero;
 	
 	@Column(name = "voto")
 	private int voto;
@@ -17,11 +17,11 @@ public class ModelCandidatos {
 	@Column(name = "nome")
 	private String nome;
 
-	public int getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 

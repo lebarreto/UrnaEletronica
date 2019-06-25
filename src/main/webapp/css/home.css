@@ -1,10 +1,3 @@
-:invalid { 
-  border-color: #e88;
-}
-
-:required {
-  border-color: #88a;
-}
 
 form {
   width:300px;
@@ -14,6 +7,16 @@ form {
 .lbl{
 	font-family:bebas;
 	font-size:1.5em;
+}
+
+#img{
+	width: 10%;
+}
+
+.otherBtn{
+	align-content: center;
+	margin: 0% 40%;
+	position: absolute;
 }
 
 input, button {
@@ -41,11 +44,6 @@ button,input[type=submit] {
 .imgCandidato{
 	width: 100%;
 	margin: 0 0 50px 0;
-}
-
-button{
-	color: #fff;
-	background-color: #3CB371;
 }
 
 button{
